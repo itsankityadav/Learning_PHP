@@ -7,8 +7,17 @@
 </head>
 <body>
     <?php
-        $a = "$str = '<a href="https://www.w3schools.com">Go to w3schools.com</a>';
-        "
+        $a = '<a shref="https://www.w3schools.com">Go to w3schools.com</a>'."<br>";
+        $b = htmlentities($a,ENT_QUOTES)."<br>";
+        echo $b;
+        echo html_entity_decode($b);
+
+        $c = '<a href="https://www.w3schools.com">Go to w3schools.com</a>'."<br>";
+        $d = htmlspecialchars($c);
+        echo $d;
+        echo htmlspecialchars_decode($d);
+
+        echo htmlspecialchars($a)."<br>";
     ?>
 </body>
 </html>
